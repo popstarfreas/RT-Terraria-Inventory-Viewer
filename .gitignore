@@ -1,4 +1,5 @@
 NodeInventoryStreamer/node_modules
+NodeInventoryStreamer/public/ToAddToZip
 # Sublime Text #
 *.sublime-*
 
