@@ -4,8 +4,12 @@ var path = require('path');
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var fs = require('fs');
+var config = require('./config.js');
+var argv = require('minimist')(process.argv.slice(2));
+var port = Number(argv.p) || process.env.PORT || config.port || 3000;
 
-http.listen(3002);
+http.listen(port);
+console.log("Listening on port: "+port);
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(serveStatic(path.resolve(__dirname, 'public')));
 
