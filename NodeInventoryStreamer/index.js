@@ -21,7 +21,7 @@ io.on('connection', function(socket) {
   socketsCount++;
     console.log("Currently Connected: "+socketsCount);
 
-  if (server != null) {
+  if (server !== null) {
     server.emit('getplayers', socket.id);
   } else {
     // No server; put them on the queue
@@ -78,7 +78,7 @@ io.on('connection', function(socket) {
   });
 
   socket.on('getinventory', function(name) {
-    if (server != null) {
+    if (server !== null) {
       server.emit('getinventory', {id: socket.id, name: name});
     }
   });
@@ -95,7 +95,7 @@ io.on('connection', function(socket) {
   });
 
   socket.on('disconnect', function() {
-    if (server != null && server.id == socket.id) {
+    if (server !== null && server.id == socket.id) {
       server = null;
       console.log("Server Disconnected. "+socket.id);
     } else {
