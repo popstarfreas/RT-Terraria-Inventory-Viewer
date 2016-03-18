@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="http://t.dark-gaming.com/view/styles.css" type="text/css" />
+    <title>T-Inv</title>
+    <style>
+    body {
+        position: relative;
+    }
+
+    #user_search {
+        position: fixed;
+        width: 170px;
+        height: 20px;
+        bottom: 1px;
+        right: 0;
+    }
+
+    #user_search_username {
+        position: absolute;
+        z-index: 11;
+        background: transparent;
+    }
+
+    #autocomplete {
+        position: absolute;    
+        z-index: 10;
+        background-color: #fff;
+    }
+    </style>
+</head>
+
+<body style="background: url('http://t.dark-gaming.com/view/backgrounds/2.jpg'); width: 100%;">
+    <p id="title">Inventory</p>
+    <table id="inv_table">
+        <tr></tr>
+        <tr>
+            <td id="0">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">1</div>
+                </div>
+            </td>
+            <td id="1">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">2</div>
+                </div>
+            </td>
+            <td id="2">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">3</div>
+                </div>
+            </td>
+            <td id="3">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">4</div>
+                </div>
+            </td>
+            <td id="4">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">5</div>
+                </div>
+            </td>
+            <td id="5">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">6</div>
+                </div>
+            </td>
+            <td id="6">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">7</div>
+                </div>
+            </td>
+            <td id="7">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">8</div>
+                </div>
+            </td>
+            <td id="8">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">9</div>
+                </div>
+            </td>
+            <td id="9">
+                <div class="item"></div>
+                <div class="item2">
+                    <div class="num2">0</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="10">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="11">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="12">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="13">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="14">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="15">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="16">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="17">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="18">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="19">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td id="20">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="21">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="22">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="23">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="24">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="25">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="26">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="27">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="28">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="29">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td id="30">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="31">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="32">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="33">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="34">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="35">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="36">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="37">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="38">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="39">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td id="40">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="41">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="42">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="43">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="44">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="45">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="46">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="47">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="48">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+            <td id="49">
+                <div class="item"></div>
+                <div class="item2"></div>
+            </td>
+        </tr>
+    </table>
+    <div id="Coins_table"><span id="Coins">Coins</span>
+        <table>
+            <tr>
+                <td id="50">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="51">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="52">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="53">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="Ammo_table"><span id="Ammo">Ammo</span>
+        <table>
+            <tr></tr>
+            <tr>
+                <td id="54">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="55">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="56">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="57">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+                <td id="58">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="stuff_table stuff_tableFix"><span id="Armor">Equip</span>
+        <table>
+            <tr>
+                <td id="59">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="60">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="61">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="62">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="63">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="64">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="65">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="66">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="67">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="stuff_table"><span id="Vanity">Social</span>
+        <table>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td id="69">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="70">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="71">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="72">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="73">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="74">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="75">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="76">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="78">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="stuff_table"><span id="Dye">Dye</span>
+        <table>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td id="79">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="80">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="81">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="82">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="83">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="84">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="85">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="86">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="87">
+                    <div class="item"></div>
+                    <div class="item2"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--<div id="Buffs">Buffs</div>-->
+    <!--<div id="Buff_table"></div>-->
+    <!--<div id="Group">Group: <em>guest</em></div><a id="return" href="?">Go back</a>-->
+    <div id="user_search">
+        <input type="text" placeholder="Character Name..." id="user_search_username" />
+        <input type="text" id="autocomplete" disabled="disabled" />
+    </div>
+    <script src="http://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="items.js"></script>
+    <script>
+    var ID = -1;
+    var users = [];
+
+    /* For clearing */
+    function clearInventory() {
+        $('td').each(function(index) {
+            if (index >= 68)
+                index++
+
+                if (index >= 77)
+                    index++;
+
+            $(this).attr('id', index);
+            $(this).html('<div class="item"></div><div class="item2">'
+                // Hotbar Number
+                + (index < 9 ? '<div class="num2">' + (index + 1) + '</div>' : index == 9 ? '<div class="num2">0</div>' : '') + '</div>');;
+        });
+    }
+
+    // ----------------
+    // WebSocket Connections
+    // ----------------
+    var socket = io('/');
+    socket.on('players', function(list) {
+        users = JSON.parse(list);
+        users.sort();
+    });
+
+    socket.on('playerjoin', function(info) {
+        var username = JSON.parse(info).name;
+        var usersCount = users.length;
+        for (var i = 0; i < usersCount; i++) {
+            if (users[i] === username)
+                return;
+        }
+
+        users.push(username);
+        users.sort();
+    });
+
+    socket.on('playerleave', function(info) {
+        var username = JSON.parse(info).name;
+        var usersCount = users.length;
+        for (var i = 0; i < usersCount; i++) {
+            if (users[i] === username) {
+                users.splice(i, 1);
+                break;
+            }
+        }
+
+        users.sort();
+    });
+
+    socket.on('slot', function(data) {
+        try {
+            data = JSON.parse(data);
+        } catch (e) {
+            console.log("=======");
+            console.log("Invalid slot data received.");
+            console.log(data);
+            console.log("=======");
+        }
+
+        if (data.index != ID)
+            return;
+
+        var netID = data.netID;
+        var slot = data.slot;
+        var stack = data.stack;
+        processSlot(netID, stack, slot);
+    });
+
+    function processSlot(netID, stack, slot) {
+    	var itemName = null;
+        if (netID > 0) {
+            itemName = itemIDs[netID - 1];
+        } else if (netID < 0) {
+            itemName = itemNIDs[Math.abs(netID) - 1];
+        }
+
+        if (itemName !== null && typeof(itemName) !== 'undefined') {
+            var itemImageName = itemName.replace(/ /g, '_');
+
+            $('#' + slot).html('<div class="item"></div><div class="item2"><div class="img"><img title="' + itemName + '" src="http://t.dark-gaming.com/view/items_images/' + encodeURIComponent(itemImageName) + '.png"></div>'
+                // Hotbar Number
+                + (slot < 9 ? '<div class="num2">' + (slot + 1) + '</div>' : slot == 9 ? '<div class="num2">0</div>' : '')
+                // Stack
+                + (stack > 1 ? '<span class="num">' + stack + '</span>' : '') + '</div>');
+        } else {
+            $('#' + slot).html('<div class="item"></div><div class="item2">'
+                // Hotbar Number
+                + (slot < 9 ? '<div class="num2">' + (slot + 1) + '</div>' : slot == 9 ? '<div class="num2">0</div>' : '') + '</div>');
+        }
+    }
+
+    socket.on('inventory', function(state, inventory, index) {
+    	inventory = JSON.parse(inventory);
+    	if (state == "failure") {
+    		console.log("Failed to get inventory.");
+    	} else {
+    		ID = index;
+    		var inventoryLength = inventory.length;
+    		for (var i = 0; i < inventoryLength; i++) {
+    			processSlot(inventory[i].netID, inventory[i].stack, i);
+    		}
+    	}
+    });
+
+    // -------------------
+    // Inventory Functions
+    // -------------------
+    function askInventory(name) {
+        socket.emit('getinventory', name);
+    }
+
+    function printUsers() {
+        var usersCount = users.length;
+        for (var i = 0; i < usersCount; i++) {
+            console.log(users[i]);
+        }
+    }
+
+    function binary_search(input) {
+        var username = null;
+        var low = 0;
+        var high = users.length-1;
+        var mid = Math.floor((high+low)/2);
+
+        // Users amount is 0
+        if (high < 0)
+            return username;
+
+        var currentElement;
+        var maxComparisons = Math.floor(Math.log(users.length) / Math.log(2))+1;
+        console.log(maxComparisons);
+        for (var i = 0; i < maxComparisons; i++) {
+            // Compare them as the same length
+            currentElement = users[mid].substr(0, input.length);
+
+            // Have we found it already?
+            if (currentElement == input) {
+                username = users[mid];
+                break;
+            } else {
+                if (currentElement > input) {
+                    high = mid-1;
+                } else {
+                    low = mid+1;
+                }
+                mid = Math.floor((high+low)/2);
+            }
+        }
+
+        return username;
+    }
+
+    // ------------------
+    // Page Interactivity
+    // ------------------
+    var suggested = "";
+    $('body').on('input', '#user_search_username', function(e) {
+        if ($(this).val().length < 1) {
+            $('#autocomplete').val('');
+            suggested = "";
+            return;
+        }
+
+        var username = binary_search($(this).val());
+        if (username !== null) {
+            $('#autocomplete').val(username);
+            suggested = username;
+        } else {
+            $('#autocomplete').val('');
+            suggested = $(this).val();
+        }
+    });
+
+    $('body').on('keydown', '#user_search_username', function(e) {
+        var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+        if (e.keyCode === 13) {
+            $(this).val(suggested);
+            askInventory(suggested);
+        }
+    })
+    </script>
+</body>
+
+</html>
